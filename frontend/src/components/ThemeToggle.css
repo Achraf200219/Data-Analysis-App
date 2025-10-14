@@ -1,0 +1,129 @@
+.theme-toggle {
+  display: flex;
+  width: 4rem; /* 64px */
+  height: 2rem; /* 32px */
+  padding: 0.25rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  user-select: none;
+}
+
+.theme-toggle.dark {
+  background-color: #0a0a0a; /* zinc-950 */
+  border: 1px solid #27272a; /* zinc-800 */
+}
+
+.theme-toggle.light {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7; /* zinc-200 */
+}
+
+.theme-toggle:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.toggle-track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.toggle-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem; /* 24px */
+  height: 1.5rem; /* 24px */
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  position: absolute;
+  z-index: 2;
+}
+
+.toggle-thumb.dark {
+  transform: translateX(0);
+  background-color: #27272a; /* zinc-800 */
+}
+
+.toggle-thumb.light {
+  transform: translateX(2rem); /* 32px */
+  background-color: #e5e7eb; /* gray-200 */
+}
+
+.secondary-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem; /* 24px */
+  height: 1.5rem; /* 24px */
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  position: absolute;
+  z-index: 1;
+}
+
+.secondary-icon.dark {
+  right: 0;
+  background-color: transparent;
+}
+
+.secondary-icon.light {
+  left: 0;
+  transform: translateX(-2rem);
+}
+
+.icon {
+  width: 1rem; /* 16px */
+  height: 1rem; /* 16px */
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.toggle-thumb.dark .icon {
+  color: #ffffff;
+}
+
+.toggle-thumb.light .icon {
+  color: #374151; /* gray-700 */
+}
+
+.secondary-icon.dark .icon {
+  color: #6b7280; /* gray-500 */
+}
+
+.secondary-icon.light .icon {
+  color: #000000;
+}
+
+/* Hover effects */
+.theme-toggle:hover {
+  transform: scale(1.02);
+}
+
+.theme-toggle:active {
+  transform: scale(0.98);
+}
+
+/* Animation improvements */
+.toggle-thumb,
+.secondary-icon {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus and accessibility */
+.theme-toggle:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.theme-toggle[aria-pressed="true"] .toggle-thumb {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

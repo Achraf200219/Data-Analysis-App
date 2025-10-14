@@ -1,0 +1,21 @@
+{
+  "name": "data-analysis-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A minimal platform for analyzing data using natural language queries.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-plotly.js": "^2.5.1",
+    "plotly.js": "^2.27.0"
+  },
+  "devDependencies": {
+    "vite": "^4.3.0",
+    "@vitejs/plugin-react": "^3.1.0"
+  }
+}
